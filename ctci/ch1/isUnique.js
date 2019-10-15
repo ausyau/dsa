@@ -27,7 +27,7 @@ const isUniqueBruteForce = (str) => {
 };
 
 const isUniqueSort = (str) => {
-  let sortedStr = str.sort();
+  let sortedStr = str.split('').sort().join('');
   for (let i = 1; i < sortedStr.length; i++) {
     if(sortedStr[i-1] === sortedStr[i]) {
       return false;
