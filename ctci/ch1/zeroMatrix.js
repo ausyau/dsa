@@ -18,7 +18,7 @@ const zeroMatrix = (arr) => {
 
   let coordinates = [];
   for (let i = 0; i < arr.length; i++) {
-    for (let j = 0; j < arr.length; j++) {
+    for (let j = 0; j < arr[i].length; j++) {
       if (arr[i][j] === 0) {
         coordinates.push([i, j]);
       }
@@ -28,13 +28,12 @@ const zeroMatrix = (arr) => {
   clear(arr, coordinates);
 
   for (let i = 0; i < arr.length; i++) {
-    for (let j = 0; j < arr.length; j++) {
+    for (let j = 0; j < arr[i].length; j++) {
       if (arr[i][j] === null) {
         arr[i][j] = 0;
       }
     }
   }
-  console.log(arr);
   return arr;
 
 };
